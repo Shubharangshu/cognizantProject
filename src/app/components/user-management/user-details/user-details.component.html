@@ -1,0 +1,79 @@
+<div>
+  <div class="container">
+    <form>
+      <div>
+        <div class="form-fields">
+          <label>Full Name :</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full Name"
+            [formControl]="fullName"
+          />
+        </div>
+        <div class="form-fields">
+          <label>Display Name :</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Display Name"
+            [formControl]="displayName"
+          />
+        </div>
+        <div class="form-fields">
+          <label>Title :</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Title"
+            [formControl]="title"
+          />
+        </div>
+        <div class="form-fields">
+          <label>User Level :</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="User Level"
+            [formControl]="userLevel"
+          />
+        </div>
+        <div class="form-fields">
+          <label>Email :</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            [formControl]="email"
+          />
+        </div>
+        <div class="form-fields">
+          <label>Phone :</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Phone"
+            [formControl]="phone"
+          />
+        </div>
+        <div class="form-fields">
+          <label>Status :</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Status"
+            [formControl]="status"
+          />
+        </div>
+        <div class="my-4 text-center">
+          <button class="btn btn-primary save" (click)="saveUser()">
+            Save
+          </button>
+          <button class="btn btn-secondary clear" (click)="clearForm()">
+            Clear
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

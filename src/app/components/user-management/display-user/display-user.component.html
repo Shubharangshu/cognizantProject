@@ -1,0 +1,54 @@
+<div>
+  <div class="mt-5 mb-1">
+    <h3>Users list</h3>
+  </div>
+  <div>
+    <table class="table table-sm table-hover">
+      <thead>
+        <tr>
+          <th scope="col" (click)="sort('fullName')">Full Name</th>
+          <th (click)="sort('displayName')">
+            Display Name&nbsp;<i class="fa fa-sort"></i>
+          </th>
+          <th scope="col" (click)="sort('title')">Title</th>
+          <th scope="col" (click)="sort('userLevel')">User Level</th>
+          <th scope="col" (click)="sort('email')">Email</th>
+          <th scope="col" (click)="sort('phone')">Phone</th>
+          <th scope="col" (click)="sort('status')">Status</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userService.usersList | orderBy: key:reverse">
+          <td>{{ user.fullName }}</td>
+          <td>{{ user.displayName }}</td>
+          <td>{{ user.title }}</td>
+          <td>{{ user.userLevel }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>{{ user.status }}</td>
+          <!-- <td><mat-icon (click)="editUsers(user)">create</mat-icon></td> -->
+          <td>
+            <button
+              type="button"
+              class="btn btn-info"
+              (click)="editUsers(user)"
+            >
+              Edit
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="deleteEmployee(user._id)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

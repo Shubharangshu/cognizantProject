@@ -1,0 +1,16 @@
+:host{
+    input{
+        margin: 5px;
+        padding: auto;
+    }
+}
+.form-group{
+display: flex;
+}
+.filter-buttons{
+    text-align: center;
+}
+.button{
+    display: flex 2;
+    margin: 0.5rem;
+}

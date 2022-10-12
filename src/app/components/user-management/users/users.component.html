@@ -1,0 +1,45 @@
+<div>
+  <form>
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        name="fullName"
+        readonly
+        placeholder="Full Name"
+      />
+      <input
+        class="form-control"
+        type="text"
+        name="displayName"
+        readonly
+        placeholder="Display Name"
+      />
+      <input
+        class="form-control"
+        type="text"
+        name="title"
+        readonly
+        placeholder="Title"
+      />
+      <!-- <input type="text" name="userLevel" readonly placeholder="User Level"value="userLevel:{{userLevel.value}}"> -->
+      <input
+        class="form-control"
+        type="text"
+        name="email"
+        readonly
+        placeholder="Email"
+      />
+      <!-- <input type="text" name="phone" readonly placeholder="Phone"value="Phone:{{phone.value}}">
+          <input type="text" name="status" readonly placeholder="Status"value="Status:{{status.value}}"> -->
+    </div>
+  </form>
+  <div class="filter-buttons">
+    <button type="button" class="btn btn-outline-primary button">
+      Clear Filter
+    </button>
+    <button type="button" class="btn btn-primary button" (click)="openDialog()">
+      Add New User
+    </button>
+  </div>
+</div>

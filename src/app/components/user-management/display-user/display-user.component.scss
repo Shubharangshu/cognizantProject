@@ -1,0 +1,28 @@
+:host{
+    table{
+        margin:  auto;
+    }
+    table,th,td{
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+    th{
+        background-color: #7bb8fd;
+        color: white;
+        font-weight: 400;
+        padding: 10px;
+    }
+    tr:nth-child(odd){
+        background-color: #c7ccd4;
+    }
+    td{
+        padding: 5px 10px ;
+        font-weight: 400;
+    }
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(67, 64, 64);
+}

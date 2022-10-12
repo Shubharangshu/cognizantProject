@@ -1,0 +1,126 @@
+<div>
+  <div class="content-container">
+    <i class="bi bi-x-circle close-dialoge" (click)="closeDialog()"></i>
+  </div>
+  <div>
+    <div class="container">
+      <div class="col-md-12">
+        <form [formGroup]="userForm">
+          <div>
+            <div class="form-fields">
+              <label>ID :</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="_id"
+                readonly
+              />
+            </div>
+            <div class="form-fields">
+              <label>Full Name :</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Full Name"
+                formControlName="fullName"
+              />
+            </div>
+            <div class="form-fields">
+              <label>Display Name :</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Display Name"
+                formControlName="displayName"
+              />
+            </div>
+
+            <div class="form-fields">
+              <label>Title :</label>
+              <select class="form-control">
+                <option>Actor</option>
+                <option>Intern</option>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Title"
+                  formControlName="title"
+                />
+              </select>
+            </div>
+            <div class="form-fields">
+              <label>User Level :</label>
+              <select class="form-control">
+                <option>Admin</option>
+                <option>Member</option>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Title"
+                  formControlName="title"
+                />
+              </select>
+            </div>
+            <div class="form-fields">
+              <label>Email :</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Email"
+                formControlName="email"
+              />
+            </div>
+            <div class="form-fields">
+              <label>Phone :</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Phone"
+                formControlName="phone"
+              />
+            </div>
+            <div class="form-fields">
+              <div>
+                <label>Status : </label>
+                <i
+                  class="bi bi-person-check-fill active"
+                  (click)="statusActive()"
+                ></i>
+                <i
+                  class="bi bi-person-x-fill inactive"
+                  (click)="statusInactive()"
+                ></i>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Status"
+                formControlName="status"
+              />
+            </div>
+            <div class="my-4 text-center">
+              <button
+                class="btn btn-primary mx-2"
+                (click)="updateEmployee()"
+                mat-flat-button
+                id="yes-button"
+                [mat-dialog-close]="true"
+              >
+                Save
+              </button>
+              <button
+                class="btn btn-secondary"
+                (click)="cancelUpdateForm()"
+                mat-flat-button
+                id="no-button"
+                [mat-dialog-close]="false"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
